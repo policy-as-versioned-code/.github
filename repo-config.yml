@@ -44,27 +44,8 @@ license: |
   SOFTWARE.
 
 files:
-  ".github/semver.yaml": |
-    version: 1
-    force:
-      major: 1
-      existing: true
-    wording:
-      patch:
-        - bump
-        - update
-        - initial
-        - tweak
-      minor:
-        - change
-        - improve
-        - implement
-        - fix
-      major:
-        - breaking
-      release:
-        - release-candidate
-        - add-rc
+  ".github/semver.yaml": null
+
   ".github/renovate.json5": |
     {
       "extends": [
@@ -75,17 +56,7 @@ files:
     github: [chrisns]
     custom: ['https://www.paypal.me/cns']
 
-  ".github/workflows/security.yml": |
-    name: "Security Scanning"
-    on:
-      push:
-        branches: [main, master]
-      pull_request:
-        branches: [main, master]
-    jobs:
-      scan:
-        name: Security Scan
-        uses: chrisns/.github/.github/workflows/security-scan.yml@main
+  ".github/workflows/security.yml": null
 
   "SECURITY.md": |
     # Security Policy
