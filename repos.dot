@@ -16,7 +16,7 @@ digraph G {
   node [shape=cylinder]
   app1, app2, app3, 
   infra1, infra2, infra3
-  e2e
+  cluster1, cluster2
 
   app1,infra1 -> policy100 [color=green]
   app1,infra1 -> policy200,policy210,policy211 [color=red,style=dashed]
@@ -26,7 +26,8 @@ digraph G {
 
   app3,infra3 -> policy211 [color=green]
 
-  e2e -> policy100,policy200,policy210,policy211,app1,app2,app3,infra1,infra2,infra3
+  cluster1 -> policy100,policy200,policy210,policy211,app1,app2,app3
+  cluster2 -> policy200,policy210,policy211,app2,app3
 
   subgraph cluster_01 { 
     node [shape=plaintext, style=invisible]
